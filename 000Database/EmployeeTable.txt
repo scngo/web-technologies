@@ -1,0 +1,17 @@
+CREATE DATABASE Travel
+
+CREATE TABLE Employee (EmpId TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+LastName VARCHAR(20) NOT NULL,
+FirstName VARCHAR(20) NOT NULL,
+Age TINYINT UNSIGNED NOT NULL,
+DateOfBirth DATE NOT NULL,
+DateInOffice DATE NOT NULL,
+EmpType VARCHAR(15) NOT NULL,
+Salary DECIMAL(8,2) UNSIGNED,
+PRIMARY KEY (EmpId));
+
+
+INSERT INTO Employee (LastName, FirstName, Age, DateOfBirth, DateInOffice, EmpType, Salary) VALUES
+('Wheeler', 'William', 41, '1973-09-28', '1993-07-01', 'Admin', 100000.00),
+('Issakov', 'Dmitri', 34, '1980-10-10', '1998-12-15', 'Manager', 80000.00),
+('Johnson', 'Albert', 29, '1985-06-12', '2005-02-28', 'Sales', 60000.00);

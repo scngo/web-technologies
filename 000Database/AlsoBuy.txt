@@ -1,0 +1,18 @@
+http://www.w3schools.com/sql/trysql.asp?filename=trysql_insert_into_select
+
+SELECT count(ProductID), ProductID FROM OrderDetails
+WHERE OrderID IN (
+  SELECT OrderID FROM OrderDetails
+  WHERE ProductID=59
+)
+AND ProductID!=59
+GROUP BY ProductID
+ORDER BY count(ProductID) DESC
+LIMIT 0,3
+
+SELECT count(OD2.ProductID), OD2.ProductID FROM OrderDetails OD1,OrderDetails OD2
+WHERE OD1.OrderID=OD2.OrderID AND OD1.ProductID=72 AND OD2.ProductID!=72
+GROUP BY OD2.ProductID
+ORDER BY count(OD2.ProductID) DESC
+
+ALTER Product ADD Figure VARCHAR(20)

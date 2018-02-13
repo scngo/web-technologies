@@ -1,0 +1,18 @@
+CREATE TABLE SpecialSale (SpslId TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+ProdId TINYINT UNSIGNED NOT NULL,
+SalePrice DECIMAL(6,2) UNSIGNED NOT NULL,
+StartDate DATE NOT NULL,
+EndDate DATE NOT NULL,
+PRIMARY KEY (SpslId),
+FOREIGN KEY (ProdId) REFERENCES Product(ProdId));
+
+INSERT INTO SpecialSale (ProdId, SalePrice, StartDate, EndDate) VALUES
+(3, 25.00, '2014-07-01', '2014-08-30'),
+(9, 55.00, '2014-08-01', '2014-08-15'),
+(15, 999.99, '2014-09-15', '2014-10-10');
+
+SELECT ProdName, ProdPrice, SalePrice FROM Product,SpecialSale WHERE Product.ProdId=SpecialSale.ProdId;
+
+SELECT ProdCateName, ProdName, ProdPrice, SalePrice, StartDate, EndDate
+FROM ProdCate,Product,SpecialSale 
+WHERE ProdCate.ProdCateId=Product.ProdCateId AND Product.ProdId=SpecialSale.ProdId;

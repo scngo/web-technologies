@@ -1,0 +1,31 @@
+CREATE TABLE Product (ProdId TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+ProdCateId TINYINT UNSIGNED NOT NULL,
+ProdName VARCHAR(20) NOT NULL,
+ProdPrice DECIMAL(6,2) UNSIGNED NOT NULL,
+ProdDesc VARCHAR(50),
+PRIMARY KEY (ProdId),
+FOREIGN KEY (ProdCateId) REFERENCES ProdCate(ProdCateId));
+
+
+INSERT INTO Product (ProdCateId, ProdName, ProdPrice, ProdDesc) VALUES
+(1, 'LOI to Russia', 30.00, 'Letter of invitation for Russian visa'),
+(1, 'LOI to Kazakhstan', 45.00, 'Letter of invitation for Kazakh visa'),
+(1, 'LOI to Uzbekistan', 50.00, 'Letter of invitation for Uzbek visa'),
+(1, 'LOI to Kyrgyzstan', 40.00, 'Letter of invitation for Kyrgyz visa'),
+(1, 'LOI to Tajikistan', 55.00, 'Letter of invitation for Tajik visa'),
+(2, 'Russian visa', 140.00, 'Russian visa applications'),
+(2, 'Kazakhstani visa', 55.00, 'Kazakhstani visa applications'),
+(2, 'Uzbekistani visa', 100.00, 'Uzbekistani visa applications'),
+(2, 'Kyrgyzstani visa', 110.00, 'Uzbekistani visa applications'),
+(2, 'Tajikistani visa', 65.00, 'Tajikistani visa applications'),
+(3, 'LAX-SVO', 924.66, 'Airticket to Moscow(Sheremetyevo)'),
+(3, 'LAX-ALA', 1046.33, 'Airticket to Almaty'),
+(3, 'LAX-TAS', 1365.87, 'Airticket to Tashkent'),
+(3, 'LAX-FRU', 1296.54, 'Airticket to Bishkek(Manas)'),
+(3, 'LAX-DYU', 1457.22, 'Airticket to Dushanbe'),
+
+(5, 'Lake Baikal', 599.99, 'Five days tour in Baikal region, Irkutsk, Olkhon Island'),
+(5, 'Baikonur Cosmodrome', 2799.99, 'Three days tour to Baikonur cosmodrome'),
+(5, 'Silk Road', 1279.99, 'Six days tour to Samarkand, Bukhara, Khiva'),
+(5, 'Issyk Kul', 859.99, 'Four days tour to Lake Issyk Kul, Cholpon-Ata, Karakol'),
+(5, 'Pamir Mountains', 1789.99, 'Seven days tour to Pamir highways, Gorno-Badakhshan');

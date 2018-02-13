@@ -1,0 +1,20 @@
+CREATE TABLE ProdCate (ProdCateId TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+ProdCateName VARCHAR(20) NOT NULL, ProdCateDesc VARCHAR(50),
+PRIMARY KEY (ProdCateId));
+
+INSERT INTO ProdCate (ProdCateName, ProdCateDesc) VALUES
+('Invitation Letter', 'Document required for visa application'),
+('Visa', 'Service to apply in the embassies'),
+('Flight Ticket', 'To/from central asia'),
+('Hotel', 'Hotel booking in Central Asia'),
+('Group Tour', 'Local group tour up to one week');
+
++------------+-------------------+----------------------------------------+
+| ProdCateId | ProdCateName      | ProdCateDesc                           |
++------------+-------------------+----------------------------------------+
+|          1 | Invitation Letter | Document required for visa application |
+|          2 | Visa              | Service to apply in the embassies      |
+|          3 | Flight Ticket     | To/from central asia                   |
+|          4 | Hotel             | Hotel booking in Central Asia          |
+|          5 | Group Tour        | Local group tour up to one week        |
++------------+-------------------+----------------------------------------+
